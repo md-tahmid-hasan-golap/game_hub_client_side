@@ -55,7 +55,7 @@ const Login = () => {
     <div className="flex justify-center items-center min-h-screen bg-gray-50 dark:bg-slate-900 px-4 my-7 rounded-lg">
       <div className="card w-full max-w-md bg-white dark:bg-slate-800 shadow-2xl rounded-lg">
         <div className="card-body p-6 sm:p-8">
-          <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white">
+          <h1 className="text-3xl font-bold text-center text-blue-600">
             Login Your Account
           </h1>
           <hr className="my-5 border-gray-300 dark:border-slate-600" />
