@@ -84,6 +84,16 @@ const Navbar = () => {
           Featured Developers
         </NavLink>
       </li>
+      <li className="font-semibold">
+        <NavLink
+          to="/aboutUs"
+          className={({ isActive }) =>
+            isActive ? "text-blue-500" : "text-white hover:text-blue-400"
+          }
+        >
+          About Us
+        </NavLink>
+      </li>
 
       {user && (
         <li className="font-semibold">
@@ -136,14 +146,9 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
             <button className="btn bg-black text-white hover:bg-gray-900">
               <FaGooglePlay size={20} />
-              <span className="hidden sm:inline">Google Play</span>
             </button>
 
-            <h1
-              className="text-xl md:text-2xl hidden md:flex font-bold 
-               bg-gradient-to-r from-purple-500 to-blue-600 
-               text-transparent bg-clip-text"
-            >
+            <h1 className="text-xl md:text-xl hidden md:flex font-bold text-white">
               GameHub
             </h1>
           </div>

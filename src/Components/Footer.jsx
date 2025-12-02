@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0f172a] text-gray-300 pt-12 pb-6 mt-10">
+    <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
       <div className="max-w-6xl mx-auto px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Logo + Name */}
         <div>
           <div className="flex items-center gap-3 mb-3">
-            <div className="bg-black text-white p-2 rounded-lg">
+            <div className="bg-black text-black p-2 rounded-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-7 w-7"
@@ -36,7 +36,7 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 text-white">Navigation</h3>
+          <h3 className="text-lg font-semibold mb-3 text-black">Navigation</h3>
           <ul className="space-y-2">
             <li>
               <Link to="/" className="hover:text-blue-400">
@@ -63,7 +63,7 @@ const Footer = () => {
 
         {/* Important Pages */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 text-white">Important</h3>
+          <h3 className="text-lg font-semibold mb-3 text-black">Important</h3>
           <ul className="space-y-2">
             <li>
               <Link to="/login" className="hover:text-blue-400">
@@ -90,7 +90,7 @@ const Footer = () => {
 
         {/* Social Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 text-white">Follow Us</h3>
+          <h3 className="text-lg font-semibold mb-3 text-black">Follow Us</h3>
 
           <div className="flex items-center gap-5">
             <a

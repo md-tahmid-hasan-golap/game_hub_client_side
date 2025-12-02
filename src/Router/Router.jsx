@@ -11,6 +11,7 @@ import PopularGameDetails from "../Components/PopularGameDetails";
 import PrivateRouter from "../Components/PrivateRouter";
 import AllGamesCardsDetails from "../Components/AllGamesCardsDetails";
 import ForgetPassword from "../Components/ForgetPassword";
+import AboutUs from "../Components/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
         path: "/popularGameDetails/:id",
         element: <PopularGameDetails></PopularGameDetails>,
         loader: () => fetch("/popularGames.json"),
+      },
+      {
+        path: "/aboutUs",
+        Component: AboutUs,
       },
       {
         path: "/allGamesCardsDetails/:id",
