@@ -8,11 +8,15 @@ const PopularGames = () => {
   // Top 3 games by rating
   const topGames = [...data]
     .sort((a, b) => parseFloat(b.ratings) - parseFloat(a.ratings))
-    .slice(0, 3);
+    .slice(0, 6);
 
   return (
     <section className="my-7 px-4  max-w-6xl mx-auto">
-      <h2 className="text-center text-4xl font-medium mb-7  text-amber-500">
+      <h2
+        className="text-center text-4xl font-medium mb-7 
+               bg-gradient-to-r from-purple-500 to-blue-600 
+               text-transparent bg-clip-text"
+      >
         Popular Games
       </h2>
 

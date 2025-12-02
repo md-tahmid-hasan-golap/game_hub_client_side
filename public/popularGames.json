@@ -5,7 +5,8 @@
     "coverPhoto": "https://i.ibb.co.com/RGyxSCn7/240-F-943578558-Cg1w-Nm-NRQn-Pr7l-C8-Sgmh1-PDNG5xa-BNKi.jpg",
     "category": "FPS",
     "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
-    "description": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps.",
+    "shortDescription": "PUBG Mobile is a fast-paced battle royale game where players fight for survival...",
+    "fullDescription": "PUBG Mobile is a fast-paced battle royale game where players fight for survival, strategy, and victory on dynamic maps. It offers a wide variety of weapons, vehicles, and realistic maps. Players can form squads with friends, use advanced tactics, and compete in global tournaments. Regular seasonal updates provide new content, skins, events, and challenges, ensuring continuous excitement and engagement for gamers of all levels.",
     "ratings": "4.5",
     "developer": "Krafton"
   },
@@ -15,7 +16,8 @@
     "coverPhoto": "https://i.ibb.co.com/KxMR0Mwr/man-racing-dirt-bike-fantasy-environment.jpg",
     "category": "Battle Royale",
     "downloadLink": "https://www.epicgames.com/fortnite/en-US/home",
-    "description": "Fortnite is a popular battle royale game known for its building mechanics, colorful graphics, and regular content updates.",
+    "shortDescription": "Fortnite is a popular battle royale game known for its building mechanics...",
+    "fullDescription": "Fortnite is a popular battle royale game known for its building mechanics, colorful graphics, and regular content updates. Players can build structures in real-time to defend themselves, gather resources, and outlast opponents in a vibrant and dynamic environment. Fortnite also features seasonal events, new skins, weapons, and crossovers with movies and pop culture icons, keeping the gameplay fresh and entertaining.",
     "ratings": "4.7",
     "developer": "Epic Games"
   },
@@ -25,7 +27,8 @@
     "coverPhoto": "https://i.ibb.co.com/sdSRRScs/cyberpunk-portrait-with-flying-man.jpg",
     "category": "FPS",
     "downloadLink": "https://i.ibb.co.com/sdSRRScs/cyberpunk-portrait-with-flying-man.jpg",
-    "description": "Call of Duty: Mobile brings fast-paced FPS action to mobile devices with multiple modes, maps, and competitive multiplayer.",
+    "shortDescription": "Call of Duty: Mobile brings fast-paced FPS action to mobile devices...",
+    "fullDescription": "Call of Duty: Mobile brings fast-paced FPS action to mobile devices with multiple modes, maps, and competitive multiplayer. The game includes iconic multiplayer maps, weapons, and perks from the original Call of Duty franchise. Players can join ranked matches, seasonal events, and tournaments. The combination of realistic graphics, responsive controls, and team-based gameplay makes it one of the most engaging FPS games on mobile.",
     "ratings": "4.6",
     "developer": "Activision"
   },
@@ -35,7 +38,8 @@
     "coverPhoto": "https://i.ibb.co.com/JR4DyZF1/240-F-1399741621-Nw-HODCZd-MNag-CEPtaif-JFCImhj-W1-NMUj.jpg",
     "category": "Casual",
     "downloadLink": "https://i.ibb.co.com/JR4DyZF1/240-F-1399741621-Nw-HODCZd-MNag-CEPtaif-JFCImhj-W1-NMUj.jpg",
-    "description": "Among Us is a multiplayer party game where crewmates work together to complete tasks while identifying impostors among them.",
+    "shortDescription": "Among Us is a multiplayer party game where crewmates work together...",
+    "fullDescription": "Among Us is a multiplayer party game where crewmates work together to complete tasks while identifying impostors among them. The game emphasizes social deduction, teamwork, and deception. Players must communicate, observe behavior, and strategically vote to eliminate impostors. With fun customization options, seasonal events, and cross-platform play, Among Us provides endless hours of interactive and engaging gameplay for friends and online communities.",
     "ratings": "4.3",
     "developer": "Innersloth"
   },
@@ -45,7 +49,8 @@
     "coverPhoto": "https://i.ibb.co.com/23cJsR0K/8-bits-characters-gaming-assets.jpg",
     "category": "Sandbox",
     "downloadLink": "https://i.ibb.co.com/YBKNJx4n/3d-isometric-view-castle-with-river.jpg",
-    "description": "Minecraft is a sandbox game where players can build, explore, and survive in a blocky world with endless possibilities.",
+    "shortDescription": "Minecraft is a sandbox game where players can build, explore, and survive...",
+    "fullDescription": "Minecraft is a sandbox game where players can build, explore, and survive in a blocky world with endless possibilities. Players can craft tools, build structures, explore caves, and interact with a variety of creatures. The game encourages creativity, problem-solving, and collaboration. Multiplayer servers allow community building, custom mods, and mini-games, making Minecraft a versatile and engaging experience for players of all ages.",
     "ratings": "4.8",
     "developer": "Mojang"
   },
@@ -55,7 +60,8 @@
     "coverPhoto": "https://i.ibb.co.com/S4FNMWmt/anime-style-character-space.jpg",
     "category": "RPG",
     "downloadLink": "https://genshin.hoyoverse.com/en",
-    "description": "Genshin Impact is an open-world action RPG with elemental magic, character switching, and a rich storyline to explore.",
+    "shortDescription": "Genshin Impact is an open-world action RPG with elemental magic...",
+    "fullDescription": "Genshin Impact is an open-world action RPG with elemental magic, character switching, and a rich storyline to explore. Players can explore a vast, visually stunning world filled with dungeons, puzzles, and treasures. The game offers character progression, cooperative multiplayer, and frequent content updates with new events, quests, and characters. Its combination of breathtaking visuals, immersive gameplay, and strategic combat ensures players remain engaged for hours.",
     "ratings": "4.4",
     "developer": "miHoYo"
   }

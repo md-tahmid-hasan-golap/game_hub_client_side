@@ -17,9 +17,14 @@ const NewsletterSection = () => {
 
   return (
     <div>
-      <h2 className="text-center text-4xl font-medium text-amber-500">
+      <h2
+        className="text-center text-4xl font-medium 
+               bg-gradient-to-r from-purple-500 to-blue-600 
+               text-transparent bg-clip-text"
+      >
         Our Newsletter
-      </h2>{" "}
+      </h2>
+
       <motion.section
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}

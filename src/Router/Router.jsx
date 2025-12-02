@@ -46,21 +46,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/popularGameDetails/:id",
-        element: (
-          <PrivateRouter>
-            {" "}
-            <PopularGameDetails></PopularGameDetails>
-          </PrivateRouter>
-        ),
+        element: <PopularGameDetails></PopularGameDetails>,
         loader: () => fetch("/popularGames.json"),
       },
       {
         path: "/allGamesCardsDetails/:id",
-        element: (
-          <PrivateRouter>
-            <AllGamesCardsDetails></AllGamesCardsDetails>
-          </PrivateRouter>
-        ),
+        element: <AllGamesCardsDetails></AllGamesCardsDetails>,
         loader: () => fetch("/popularGames.json"),
       },
       {

@@ -9,7 +9,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // 🔹 Map routes to readable names
+  // Route Names
   const routeNameMap = {
     "/": "Home",
     "/allGames": "All Games",
@@ -19,29 +19,27 @@ const Navbar = () => {
     "/myProfile": "My Profile",
   };
 
-  // 🔹 Detect current route name
   const currentRouteName = useMemo(() => {
     if (routeNameMap[location.pathname]) {
       return routeNameMap[location.pathname];
     }
-    // Example for dynamic routes (like /game/123)
     if (location.pathname.startsWith("/game/")) {
       return "Game Details";
     }
     return "GameHub";
   }, [location.pathname]);
 
-  // 🔹 Update tab title dynamically
+  // Update Tab Title only
   useEffect(() => {
     document.title = `${currentRouteName} | GameHub`;
   }, [currentRouteName]);
 
-  // 🔹 Logout
+  // Logout
   const handelLogout = () => {
     logOut()
       .then(() => {
         Swal.fire({
-          title: "LogOut Successfully!",
+          title: "Logged Out Successfully!",
           icon: "success",
           timer: 1500,
           showConfirmButton: false,
@@ -51,34 +49,36 @@ const Navbar = () => {
       .catch((error) => console.log(error));
   };
 
-  // 🔹 Navbar links
+  // Navbar Links
   const links = (
     <>
       <li className="font-semibold">
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "btn mr-2 bg-blue-600 text-white" : "btn mr-2"
+            isActive ? "text-blue-500" : "text-white hover:text-blue-400"
           }
         >
           Home
         </NavLink>
       </li>
+
       <li className="font-semibold">
         <NavLink
           to="/allGames"
           className={({ isActive }) =>
-            isActive ? "btn mr-2 bg-blue-600 text-white" : "btn mr-2"
+            isActive ? "text-blue-500" : "text-white hover:text-blue-400"
           }
         >
           All Games
         </NavLink>
       </li>
+
       <li className="font-semibold">
         <NavLink
           to="/featuredDevelopers"
           className={({ isActive }) =>
-            isActive ? "btn mr-2 bg-blue-600 text-white" : "btn mr-2"
+            isActive ? "text-blue-500" : "text-white hover:text-blue-400"
           }
         >
           Featured Developers
@@ -88,83 +88,96 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
-      <div className="navbar-start">
-        {/* 🔹 Mobile Menu */}
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
-          <ul
-            tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-          >
-            {links}
-          </ul>
-        </div>
+    <div className="bg-[#0f172a] text-white shadow-md sticky top-0 z-50 w-full">
+      <div className="max-w-6xl mx-auto px-4 navbar">
+        {/* LEFT SECTION */}
+        <div className="navbar-start">
+          {/* Mobile menu */}
+          <div className="dropdown lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </div>
 
-        {/* 🔹 Left: Logo & Route Name */}
-        <div className="flex items-center gap-4">
-          <button className="btn bg-black text-white hover:bg-gray-900">
-            <FaGooglePlay size={20} />
-            <span className="hidden sm:inline">Google Play</span>
-          </button>
-          <div className="flex flex-col">
-            <h1 className="text-2xl font-bold hidden md:flex text-amber-500">
+            <ul
+              tabIndex={-1}
+              className="menu menu-sm dropdown-content bg-[#1e293b] text-white rounded-box mt-3 w-52 p-2 shadow"
+            >
+              {links}
+            </ul>
+          </div>
+
+          {/* Logo (Route title removed from UI) */}
+          <div className="flex items-center gap-3">
+            <button className="btn bg-black text-white hover:bg-gray-900">
+              <FaGooglePlay size={20} />
+              <span className="hidden sm:inline">Google Play</span>
+            </button>
+
+            <h1
+              className="text-xl md:text-2xl hidden md:flex font-bold 
+               bg-gradient-to-r from-purple-500 to-blue-600 
+               text-transparent bg-clip-text"
+            >
               GameHub
             </h1>
-            <span className="text-sm text-gray-500">{currentRouteName}</span>
           </div>
         </div>
-      </div>
 
-      {/* 🔹 Center Links */}
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
-      </div>
+        {/* CENTER NAV LINKS */}
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal gap-5 px-1">{links}</ul>
+        </div>
 
-      {/* 🔹 Right: Profile or Login/Register */}
-      <div className="navbar-end gap-3 mr-5">
-        {user ? (
-          <>
-            <Link to="/myProfile">
-              <img
-                className="w-10 h-10 rounded-full border-2 border-green-600"
-                src={user.photoURL}
-                alt="User"
-                title={user.displayName}
-              />
-            </Link>
-            <button
-              onClick={handelLogout}
-              className="btn bg-red-600 text-white"
-            >
-              Logout
-            </button>
-          </>
-        ) : (
-          <>
-            <Link to="/login" className="btn">
-              Login
-            </Link>
-            <Link to="/register" className="btn">
-              Register
-            </Link>
-          </>
-        )}
+        {/* RIGHT SECTION */}
+        <div className="navbar-end gap-3">
+          {user ? (
+            <>
+              <Link to="/myProfile">
+                <img
+                  className="w-10 h-10 rounded-full border-2 border-green-500"
+                  src={user.photoURL}
+                  alt="User"
+                  title={user.displayName}
+                />
+              </Link>
+
+              <button
+                onClick={handelLogout}
+                className="btn bg-red-600 hover:bg-red-700 text-white"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="btn btn-outline text-white hover:bg-blue-600 "
+              >
+                Login
+              </Link>
+              <Link
+                to="/register"
+                className="btn btn-outline text-white  hover:bg-blue-600"
+              >
+                Register
+              </Link>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
