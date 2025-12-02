@@ -12,6 +12,7 @@ import PrivateRouter from "../Components/PrivateRouter";
 import AllGamesCardsDetails from "../Components/AllGamesCardsDetails";
 import ForgetPassword from "../Components/ForgetPassword";
 import AboutUs from "../Components/AboutUs";
+import Contact from "../Components/Contact";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "/aboutUs",
         Component: AboutUs,
+      },
+      {
+        path: "/contact",
+        Component: Contact,
       },
       {
         path: "/allGamesCardsDetails/:id",

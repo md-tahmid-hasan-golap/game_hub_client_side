@@ -14,22 +14,20 @@ const Navbar = () => {
     "/": "Home",
     "/allGames": "All Games",
     "/featuredDevelopers": "Featured Developers",
+    "/aboutUs": "About Us",
+    "/contact": "Contact",
     "/login": "Login",
     "/register": "Register",
     "/myProfile": "My Profile",
   };
 
   const currentRouteName = useMemo(() => {
-    if (routeNameMap[location.pathname]) {
-      return routeNameMap[location.pathname];
-    }
-    if (location.pathname.startsWith("/game/")) {
-      return "Game Details";
-    }
+    if (routeNameMap[location.pathname]) return routeNameMap[location.pathname];
+    if (location.pathname.startsWith("/game/")) return "Game Details";
     return "GameHub";
   }, [location.pathname]);
 
-  // Update Tab Title only
+  // Update Tab Title
   useEffect(() => {
     document.title = `${currentRouteName} | GameHub`;
   }, [currentRouteName]);
@@ -56,7 +54,7 @@ const Navbar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-white hover:text-blue-400"
+            isActive ? "text-blue-500" : "text-black hover:text-blue-400"
           }
         >
           Home
@@ -67,7 +65,7 @@ const Navbar = () => {
         <NavLink
           to="/allGames"
           className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-white hover:text-blue-400"
+            isActive ? "text-blue-500" : "text-black hover:text-blue-400"
           }
         >
           All Games
@@ -78,20 +76,32 @@ const Navbar = () => {
         <NavLink
           to="/featuredDevelopers"
           className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-white hover:text-blue-400"
+            isActive ? "text-blue-500" : "text-black hover:text-blue-400"
           }
         >
           Featured Developers
         </NavLink>
       </li>
+
       <li className="font-semibold">
         <NavLink
           to="/aboutUs"
           className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-white hover:text-blue-400"
+            isActive ? "text-blue-500" : "text-black hover:text-blue-400"
           }
         >
           About Us
+        </NavLink>
+      </li>
+
+      <li className="font-semibold">
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive ? "text-blue-500" : "text-black hover:text-blue-400"
+          }
+        >
+          Contact
         </NavLink>
       </li>
 
@@ -100,7 +110,7 @@ const Navbar = () => {
           <NavLink
             to="/myProfile"
             className={({ isActive }) =>
-              isActive ? "text-blue-500" : "text-white hover:text-blue-400"
+              isActive ? "text-blue-500" : "text-black hover:text-blue-400"
             }
           >
             My Profile
@@ -111,7 +121,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="bg-[#0f172a] text-white shadow-md sticky top-0 z-50 w-full">
+    <div className="bg-gray-100 shadow-md sticky top-0 z-50 w-full">
       <div className="max-w-6xl mx-auto px-4 navbar">
         {/* LEFT SECTION */}
         <div className="navbar-start">
@@ -136,7 +146,7 @@ const Navbar = () => {
 
             <ul
               tabIndex={-1}
-              className="menu menu-sm dropdown-content bg-[#1e293b] text-white rounded-box mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-gray-100 text-black rounded-box mt-3 w-52 p-2 shadow"
             >
               {links}
             </ul>
@@ -144,11 +154,8 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <button className="btn bg-black text-white hover:bg-gray-900">
-              <FaGooglePlay size={20} />
-            </button>
-
-            <h1 className="text-xl md:text-xl hidden md:flex font-bold text-white">
+            <FaGooglePlay size={20} className="text-black" />
+            <h1 className="text-xl md:text-xl hidden md:flex font-bold text-black">
               GameHub
             </h1>
           </div>
@@ -183,13 +190,13 @@ const Navbar = () => {
             <>
               <Link
                 to="/login"
-                className="btn btn-outline text-white hover:bg-blue-600 "
+                className="btn btn-outline text-black hover:bg-blue-600"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className="btn btn-outline text-white hover:bg-blue-600"
+                className="btn btn-outline text-black hover:bg-blue-600"
               >
                 Register
               </Link>

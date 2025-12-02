@@ -98,7 +98,9 @@ const MyProfile = () => {
 
         <button
           onClick={handleSave}
-          className="w-full py-3 rounded-lg bg-yellow-400 text-indigo-900 font-extrabold hover:bg-yellow-300 transition-shadow shadow-md hover:shadow-xl"
+          className="block text-center w-full py-2 rounded-md font-semibold text-white 
+          bg-gradient-to-r from-purple-500 to-blue-600 
+          hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
         >
           Save Changes
         </button>
