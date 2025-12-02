@@ -84,6 +84,19 @@ const Navbar = () => {
           Featured Developers
         </NavLink>
       </li>
+
+      {user && (
+        <li className="font-semibold">
+          <NavLink
+            to="/myProfile"
+            className={({ isActive }) =>
+              isActive ? "text-blue-500" : "text-white hover:text-blue-400"
+            }
+          >
+            My Profile
+          </NavLink>
+        </li>
+      )}
     </>
   );
 
@@ -119,7 +132,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Logo (Route title removed from UI) */}
+          {/* Logo */}
           <div className="flex items-center gap-3">
             <button className="btn bg-black text-white hover:bg-gray-900">
               <FaGooglePlay size={20} />
@@ -171,7 +184,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/register"
-                className="btn btn-outline text-white  hover:bg-blue-600"
+                className="btn btn-outline text-white hover:bg-blue-600"
               >
                 Register
               </Link>

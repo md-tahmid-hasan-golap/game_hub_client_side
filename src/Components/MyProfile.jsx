@@ -48,7 +48,7 @@ const MyProfile = () => {
   };
 
   return user ? (
-    <div className="min-h-screen flex items-center justify-center px-4 bg-gray-100 py-10">
+    <div className="min-h-screen flex items-center justify-center px-4 bg-gray-100 py-10 my-7 rounded-lg">
       <div className="bg-gradient-to-tr from-indigo-900 via-purple-800 to-pink-700 rounded-3xl shadow-xl max-w-md w-full p-10">
         <h2 className="text-5xl font-extrabold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
           My Profile

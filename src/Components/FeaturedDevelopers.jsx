@@ -33,7 +33,11 @@ const developers = [
 const FeaturedDevelopers = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-center mb-8 text-amber-500">
+      <h2
+        className="text-3xl font-bold text-center mb-8 
+               bg-gradient-to-r from-purple-500 to-blue-600 
+               text-transparent bg-clip-text"
+      >
         Featured Developers
       </h2>
 
