@@ -7,7 +7,6 @@ const AllGames = () => {
   const data = useLoaderData();
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Filtered games based on search
   const filteredData = data.filter((game) =>
     game.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -15,33 +14,31 @@ const AllGames = () => {
   return (
     <div className="my-7 max-w-6xl mx-auto px-4">
       {/* Header + Search */}
-      <div className="relative flex items-center mb-8">
-        {/* Heading centered */}
-        <h2
-          className="absolute left-1/2 transform -translate-x-1/2 text-4xl font-medium 
-                     bg-gradient-to-r from-purple-500 to-blue-600 
-                     text-transparent bg-clip-text"
-        >
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+        {/* Heading Center */}
+        <h2 className="text-3xl md:text-4xl font-medium bg-gradient-to-r from-purple-500 to-blue-600 text-transparent bg-clip-text text-center w-full md:w-auto">
           All Games
         </h2>
 
-        {/* Search Bar on right */}
-        <div className="ml-auto w-full md:w-64">
+        {/* Search Bar */}
+        <div className="w-full sm:w-72 md:w-64">
           <div className="relative">
             <input
               type="text"
               placeholder="Search games..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"
+              className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 
+                         focus:outline-none focus:ring-2 focus:ring-purple-500 
+                         focus:border-transparent transition"
             />
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
           </div>
         </div>
       </div>
 
-      {/* Games Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      {/* All Games Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {filteredData.map((allcard) => (
           <AllGamesCards key={allcard.id} allcard={allcard} />
         ))}
